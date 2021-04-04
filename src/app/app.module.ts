@@ -1,25 +1,19 @@
-import { appRoutes } from './routes';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
-import { RegisterComponent } from './register/register.component';
-import { ResultComponent } from './result/result.component';
+import { HttpClientModule } from "@angular/common/http"
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    QuizComponent,
-    RegisterComponent,
-    ResultComponent
+    QuizComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
